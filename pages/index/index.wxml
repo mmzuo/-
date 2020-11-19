@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class='pro-attention' bindtap='toAttention'
+    style="background:url('{{imageSrcBack}}') no-repeat #ffffff;background-size:100% 100%;">
+   <text>关注公众号</text> 
+    <image src='{{imageSrc}}' class='back_image' animation="{{attentionAnim}}"></image>
+    <view class='circle'><text wx:for="{{imageList}}" class="{{index == selectIndex ? 'selected' :''}}"
+        wx:key="index"></text></view>
+  </view> -->
+  <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
+    duration="500" bindtap='toAttention'>
+    <swiper-item wx:for="{{imageList}}" wx:key="id" data-desc="{{item.desc}}">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"
+        wx:if="{{item.type=='video'}}"></video>
+    </swiper-item>
+  </swiper>
+  <view style="margin-top:10px; background:#ffffff">
+    <van-cell title="精选" value="滑动查看" />
+    <view class="slider-item shadow-blur">
+      <scroll-view scroll-x="true" style="width: 100%" enhanced="true">
+        <!-- <view class="" >
+          <image src="{{item.imgUrl}}" mode="aspecFill"></image>
+          <view>{{item.name}} </view>
+        </view> -->
+        <view class="swiper-item mb-sm" wx:for="{{sliderList}}" wx:key="index"
+          data-name="{{item.name}}" bindtap="openDialog">
+          <view class="margin-sm radius">
+            <view class="cu-avatar radius xl">
+              <image mode="aspectFill" src="{{item.imgUrl}}"></image>
+            </view>
+            <view class="text-pink">
+              {{item.name}}
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view>
+    <demoList wx:for="{{contentList}}" content="{{item}}" wx:key="id"></demoList>
+  </view>
+
+  <van-dialog use-slot show="{{ show }}" message-align="right" show-cancel-button confirm-button-open-type="getUserInfo"
+    bind:close="onClose" bind:getuserinfo="getUserInfo" custom-style="text-align:center;line-height:36px">
+    {{message}}
+  </van-dialog>
+</view>

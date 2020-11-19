@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/personal/index",
+    "pages/personal/detail/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#efefef",
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#efefef"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#f10b2e",
+    "borderStyle": "black",
+    "backgroundColor": "#16181c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/image/tech.png",
+        "selectedIconPath": "static/image/tech.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我",
+        "iconPath": "static/image/technicalCount.png",
+        "selectedIconPath": "static/image/technicalCount.png"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "text": "我",
+        "iconPath": "static/image/technicalCount.png",
+        "selectedIconPath": "static/image/technicalCount.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "cu-custom": "/colorui/components/cu-custom",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

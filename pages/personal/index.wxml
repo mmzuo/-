@@ -1,0 +1,18 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+  <view class="person-info padding bg-white radius text-center shadow-blur">
+    <image class="cu-avatar round"></image>
+    <view>
+      <view>姓名</view>
+      <van-cell border="{{ flase }}" title="微信号：的读读写写" is-link link-type="navigateTo" url="/pages/personal/detail/index" />
+    </view>
+  </view>
+  <van-cell-group custom-class="padding-top bg-white">
+    <van-cell border="{{flase}}" icon="like-o" is-link title="我的收藏"></van-cell>
+    <van-cell border="{{flase}}" icon="star-o" is-link title="我的发现"></van-cell>
+    <van-cell border="{{flase}}" icon="eye-o" is-link title="隐私设置"></van-cell>
+    <van-divider />
+    <van-cell border="{{flase}}" icon="fire-o" is-link title="我要招聘"></van-cell>
+    <van-cell border="{{flase}}" icon="info-o" is-link title="意见反馈"></van-cell>
+  </van-cell-group>
+</view>

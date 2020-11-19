@@ -1,0 +1,91 @@
+/**index.wxss**/
+.pro-attention {
+  height: 230px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 300rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+.circle {
+  position: absolute;
+  top: 200px;
+  margin-left: 30%;
+}
+
+text.selected {
+  background-color: aqua;
+  color: aqua;
+}
+
+text {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #cccccc;
+  margin-left: 10px;
+
+}
+
+.slider-item {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  overflow: scroll;
+}
+
+.swiper-item {
+  text-align: center;
+  display: inline-block;
+}
+
+.custom-dia {
+  padding-left: 20px;
+}
+
+.content-list {
+  display: flex;
+  white-space: nowrap;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.left {
+  width: 30%;
+  align-self: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.right-top {
+  align-items: top;
+  height: max-content;
+  height: -webkit-fill-available;
+  padding-top: 10px;
+}
+
+.right-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}

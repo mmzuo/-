@@ -1,0 +1,6 @@
+/* pages/personal/personal.wxss */
+.person-info {
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}

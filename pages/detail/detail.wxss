@@ -1,0 +1,48 @@
+/* pages/detail/detail.wxss */
+.page-body {
+  width: 100%;
+}
+
+.swiper-item {
+  height: 100%;
+  width: 100%;
+  color: #cccccc;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+.bo-height {
+  height: 100rpx;
+  position: fixed;
+  width: 100%;
+  bottom: 0
+}
+
+.cu-bar-height {
+  height: 280rpx;
+}
+.detail-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.detail-subtitle {
+  display: flex;
+  color: #aaaaaa;
+  white-space: normal;
+  flex-direction: row;
+  justify-content: space-between;
+    align-items: center;
+}

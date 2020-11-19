@@ -1,0 +1,58 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+  <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+    <view slot="backText">{{nvTitle}}</view>
+    <view slot="content">列表</view>
+  </cu-custom>
+  <view style="position:reaative">
+    <view>
+      <view class="detail-title line-height padding-left" style="line-height:45px">
+        小程序学习详情页介绍xx
+      </view>
+      <view class="detail-subtitle padding-left padding-right">
+        <view>
+          <van-icon name="clock-o" />
+          2020-04-09
+        </view>
+        <view>
+          <van-icon name="browsing-history-o" />
+          32
+        </view>
+        <view>
+          <van-icon name="like-o" />21
+        </view>
+      </view>
+      <view class="line-height padding-left padding-right">
+        经过一天的学习，路由跳转、页面开发、form表单简单的双向绑定；vant toastbug，等都会正确使用，
+        输入框的验证，尽快到数据库费进度款放大镜看放大镜看加咖啡的境况将反馈进度款放大镜看，借款单尽可能积极，
+        紧身裤的境况i我家会计师苦上加苦交定金开发商将肯定是框架 借款单紧身裤，
+        多少级空间快手电竞多少级空间肯定是。
+        该demo的主要包含的内容：
+      </view>
+      <view wx:for="{{contentList}}" class="line-height font-weight padding-left padding-right">{{index + 1}}:  {{item}}</view>
+    </view>
+  </view>
+  <view class="bo-height {{hidden ? 'cu-bar-height': ''}}" style="">
+    <view class="cu-bar input">
+      <view class="action">
+        <text class="cuIcon-sound text-grey"></text>
+      </view>
+      <input class="solid-bottom" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+      <view class="action">
+        <text class="cuIcon-emojifill text-grey"></text>
+      </view>
+      <button class="cu-btn bg-green shadow-blur">发送</button>
+      <van-icon name="ellipsis" class="margin-left-xs" bindtap="openShare" />
+    </view>
+    <view class="cu-list grid col-5 no-border">
+      <view class="cu-item" wx:for="{{iconList}}" wx:key="icon">
+        <view class="cuIcon-{{item.icon}} text-{{item.color}}">
+          <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+            <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
+          </view>
+        </view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
